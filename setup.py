@@ -13,7 +13,7 @@ name = 'py_weather_cli'
 
 setup(
     name = name,
-    version = '1.0.0',
+    version = '1.0.1',
     packages = ['weather_cli'],
     description = 'python version implementation of `wego` which is a weather forecast client for the terminal.',
     long_description = long_description,
