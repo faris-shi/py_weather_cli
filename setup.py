@@ -9,7 +9,7 @@ requirements = [
     'click'
 ]
 
-name = 'weather_cli'
+name = 'py_weather_cli'
 
 setup(
     name = name,

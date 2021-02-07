@@ -14,7 +14,7 @@ This project is just only for study purpose, please do not use it for business.
 ## Installation
 
 ```
-pip3 install weather_cli
+pip3 install py_weather_cli
 
 weather_cli -c toronto
 ```
