@@ -6,8 +6,8 @@ import requests
 
 
 try:
-    from weather_cli.weather import *
-    from weather_cli.utils import *
+    from py_weather_cli.weather import *
+    from py_weather_cli.utils import *
 except ModuleNotFoundError:
     from weather import *
     from utils import *
@@ -114,9 +114,9 @@ class OpenWeatherMap(Backend):
         temp = UnitSystem(detail['main']['temp'])
         feels_like = UnitSystem(detail['main']['feels_like'])
         chance_of_rain_percent = detail['rain']['3h'] * 100 if 'rain' in detail else None
-        precipitation = UnitSystem(detail['pop'] * 1000) if 'pop' in detail else None
+        precipitation = UnitSystem(detail['pop'] / 1000 / 1000) if 'pop' in detail else None
         visibility = UnitSystem(detail['visibility'] / 1000)
-        wind_speed = UnitSystem(detail['wind']['speed'])
+        wind_speed = UnitSystem(detail['wind']['speed'] * 3.6)
         wind_direction = detail['wind']['deg']
         humidity = UnitSystem(detail['main']['humidity'])
         code = CODE_UNKNOWN if code not in _CODE_MAP else _CODE_MAP.get(code)

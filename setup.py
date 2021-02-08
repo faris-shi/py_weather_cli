@@ -26,7 +26,7 @@ setup(
     install_requires=requirements,
     entry_points={
         'console_scripts':[
-            'weather_cli=weather_cli.main:cli' 
+            'weather_cli=py_weather_cli.main:cli' 
         ]
     },
     classifiers=[

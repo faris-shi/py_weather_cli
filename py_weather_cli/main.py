@@ -7,9 +7,9 @@ import configparser
 import click
 
 try:
-    from weather_cli.openweathermap import *
-    from weather_cli.ascii_art import *
-    from weather_cli.weather import *
+    from py_weather_cli.openweathermap import *
+    from py_weather_cli.ascii_art import *
+    from py_weather_cli.weather import *
 except ModuleNotFoundError:
     from openweathermap import *
     from ascii_art import *

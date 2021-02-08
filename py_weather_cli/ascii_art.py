@@ -5,7 +5,7 @@ import collections
 
 
 try:
-    from weather_cli.weather import *
+    from py_weather_cli.weather import *
 except ModuleNotFoundError:
     from weather import *
 
